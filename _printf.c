@@ -7,8 +7,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int a = 0;
 	va_list args;
+	int a = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 's')
 			{
-				char *str = va_arg(args, char*);
+				char *str = va_arg(args, char *);
 
 				write(1, str, strlen(str));
 				a++;
