@@ -17,14 +17,14 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (*format)
 	{
-		if (*format == '\0')
-			break;
+		if (*format != '%')
+			write(1, format, 1);
 		else
 		{
 			format++;
 
-			if (*format != '%')
-				write(1, format, 1);
+			if (*format == '\0')
+				break;
 			a++;
 			if (*format == '%')
 			{
