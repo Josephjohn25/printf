@@ -5,15 +5,13 @@
  * @format: Constant format for variadic function
  * Return: Printed string
  */
-
 int _printf(const char *format, ...)
 {
 	int a;
 	va_list args;
-	
+
 	if (format == NULL)
 		return (-1);
-
 	va_start(args, format);
 	while (*format)
 	{
@@ -34,18 +32,20 @@ int _printf(const char *format, ...)
 			else if (*format == 'c')
 			{
 				char c = va_arg(args, int);
+
 				write(1, &c, 1);
 				a++;
 			}
 			else if (*format == 's')
 			{
 				char *str = va_arg(args, char *);
+
 				write(1, str, strlen(str));
 				a++;
 			}
 		}
 		format++;
+		va_end(args);
 	}
-	va_end(args);
 	return (a);
 }
