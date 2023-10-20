@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int a;
+	int a = 0;
 	va_list args;
 
 	if (format == NULL)
