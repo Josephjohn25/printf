@@ -37,9 +37,14 @@ int _printf(const char *format, ...)
 				write(1, &b, 1);
 				a++;
 			}
-		}
-		format++;
-	}
-	va_end(args);
+			else if (*format == 's')
+			{
+				char *str = va_arg(args, char*);
+
+				write(1, str, strlen(str));
+				a++;
+			}
+		}	format++;
+	}	va_end(args);
 	return (a);
 }
