@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	int a;
-	va_list prints;
+	va_list args;
 	
 	if (format == NULL)
 		return (-1);
@@ -31,15 +31,15 @@ int _printf(const char *format, ...)
 				write(1, format, 1);
 				a++;
 			}
-			else if (format == 'c')
+			else if (*format == 'c')
 			{
-				char *c = va_arg(prints, int);
-				write(1, c, 1);
+				char c = va_arg(args, int);
+				write(1, &c, 1);
 				a++;
 			}
-			else if (format == 's')
+			else if (*format == 's')
 			{
-				char *str = Va_arg(prints, char *);
+				char *str = va_arg(args, char *);
 				write(1, str, strlen(str));
 				a++;
 			}
