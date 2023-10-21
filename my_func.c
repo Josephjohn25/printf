@@ -20,7 +20,7 @@ int print_c(va_list args)
  */
 int print_s(va_list args)
 {
-	int a , count = 0;
+	int a, count = 0;
 	char *str;
 
 	a = 0;
