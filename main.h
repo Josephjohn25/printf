@@ -8,18 +8,6 @@
 #include <stdio.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
  * struct print - Typedef print function
  * @count: Type of count
  * @f: count function
@@ -38,5 +26,5 @@ int print_s(va_list args);
 int print_d(va_list args);
 int print_i(va_list args);
 int print_percent(va_list args);
-int _putchar(char c);
+
 #endif /* MAIN_h */
