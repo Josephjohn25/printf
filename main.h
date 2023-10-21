@@ -5,8 +5,27 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-typedef struct specifier
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+/**
+ * struct print - Typedef print function
+ * @count: Type of count
+ * @f: count function
+ */
+
+typedef struct print
 {
 	char *count;
 	int (*f)(va_list);
