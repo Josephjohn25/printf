@@ -40,9 +40,11 @@ int _printf(const char *format, ...)
 			else if (*format == 's')
 			{
 				char *str = va_arg(args, char *);
-
-				write(1, str, strlen(str));
-				a++;
+				int strlen = 0;
+				if (str[strlen] != '\0')
+					strlen++;
+				write(1, str, strlen);
+				a += strlen;
 			}
 		}	format++;
 	}	va_end(args);
