@@ -10,8 +10,7 @@ int _printf(const char *format, ...)
 {
 	if (*format != '\0')
 	{
-		int step = 0;
-		int a = 0;
+		int step = 0, a = 0;
 		int (*i)(va_list);
 		va_list args;
 
