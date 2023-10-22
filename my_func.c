@@ -83,7 +83,7 @@ int print_d(va_list args)
 	step_num = 1;
 
 	while (step > 9)
-        {
+	{
 		step = step / 10;
 		step_num = step_num * 10;
 	}
