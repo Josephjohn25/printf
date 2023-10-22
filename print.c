@@ -16,10 +16,10 @@ int _printf(const char *format, ...)
 
 		va_start(args, format);
 
-		if (format[0] == '%' && format[1] == '\0')
+		if (format[0] == '%' || format[1] == '\0')
 			return (-1);
 
-		while (format[a] != '\0')
+		while (format[a] != '\0' || format != NULL)
 		{
 			if (format[a] == '%')
 			{
