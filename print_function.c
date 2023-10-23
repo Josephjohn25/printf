@@ -14,7 +14,7 @@ int (*print_function(char a))(va_list)
 		{"%", print_modulo},
 		{"d", print_d},
 		{"i", print_i},
-		{0, 0}
+		{NULL, NULL}
 	};
 	while (arr[x].count)
 	{
