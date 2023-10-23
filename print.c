@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...)
 {
-	if (*format != '\0')
+	if (*format != NULL)
 	{
 		int step = 0, a = 0;
 		int (*i)(va_list);
