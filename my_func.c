@@ -39,7 +39,7 @@ int print_s(va_list args)
 }
 
 /**
- * print_percent - program that prints modulo
+ * print_modulo - program that prints modulo
  * @args: modulo argument
  * Return: return the percent sing
  */
