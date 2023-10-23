@@ -11,7 +11,7 @@ int (*print_function(char a))(va_list)
 	func arr[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_percent},
+		{"%", print_modulo},
 		{"d", print_d},
 		{"i", print_i},
 		{0, 0}
