@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_c - prints character
+ * print_c - function that prints character
  * @args: character argument
  * Return: number of characters
  */
@@ -15,23 +15,23 @@ int print_c(va_list args)
 }
 
 /**
- * print_s - prints a string
- * @args: string  argument
+ * print_s - program that prints a string
+ * @args: string argument
  * Return: number of characters
  */
 int print_s(va_list args)
 {
 	int a;
 	int s = 0;
-	char *str;
+	char *string;
 
 	a = 0;
-	str = va_arg(args, char*);
-	if (str == NULL)
-		str = "(null)";
-	while (str[a] != '\0')
+	string = va_arg(args, char*);
+	if (string == NULL)
+		string = "(null)";
+	while (string[a] != '\0')
 	{
-		_putchar(str[a]);
+		_putchar(string[a]);
 		a++;
 		s++;
 	}
@@ -39,21 +39,21 @@ int print_s(va_list args)
 }
 
 /**
- * print_percent - program that pass the percent sing
- * @args: string  argument
+ * print_percent - program that prints modulo
+ * @args: modulo argument
  * Return: return the percent sing
  */
 
-int print_percent(va_list args)
+int print_modulo(va_list args)
 {
-	char *str;
+	char *string;
 
-	str = "%";
-	if (va_arg(args, int) == *str)
+	string = "%";
+	if (va_arg(args, int) == *string)
 	{
-		return (*str);
+		return (*string);
 	}
-	return (*str);
+	return (*string);
 }
 
 /**
