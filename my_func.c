@@ -71,7 +71,7 @@ int print_d(va_list args)
 	b = va_arg(args, int);
 		if (b < 0)
 		{
-			a = -b
+			a = -b;
 			s = s + _putchar('-');
 		}
 		else
