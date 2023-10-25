@@ -69,15 +69,15 @@ int print_d(va_list args)
 
 	s = 0;
 	b = va_arg(args, int);
-		if (b > 0)
-		{
-			a = b;
-		}
-		else
+		if (b < 0)
 		{
 			a = (b * -1);
 			s = s + _putchar('-');
 		}
+		else
+		{
+                        a = b;
+                }
 
 	step = a;
 	step_num = 1;
