@@ -5,6 +5,7 @@
  * @a: variable to the function
  * Return: function
  */
+
 int (*print_function(char a))(va_list)
 {
 	int x = 0;

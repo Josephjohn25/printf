@@ -90,7 +90,7 @@ int print_d(va_list args)
 
 	while (step_num >= 1)
 	{
-		s = s +  _putchar(((a / step_num) % 10) + '0');
+		s = s + _putchar(((a / step_num) % 10) + '0');
 		step_num = step_num / 10;
 	}
 	return (s);
